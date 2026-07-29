@@ -1,0 +1,10 @@
+flowchart LR
+  PR[Pull Request] --> L[Lint + Typecheck]
+  L --> T[Unit + Component Tests]
+  T --> B[Production Build]
+  B --> S[Security + Bundle Checks]
+  S --> E[E2E + Accessibility]
+  E --> P[Preview Environment]
+  P --> M[Merge]
+  M --> D[Progressive Deployment]
+  D --> O[Monitoring + Rollback]

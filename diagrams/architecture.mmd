@@ -1,0 +1,10 @@
+flowchart LR
+  U[User] --> A[Next.js App Router]
+  A --> R[Route Shell]
+  R --> F[Feature Module]
+  F --> Q[Server State / Query Layer]
+  F --> D[Domain Services]
+  D --> P[Repository]
+  P --> API[Backend API]
+  F --> UI[Shared Design System]
+  A --> O[Observability]

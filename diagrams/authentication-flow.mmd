@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant B as Browser
+  participant N as Next.js Server
+  participant I as Identity Service
+  B->>N: Submit credentials / OAuth callback
+  N->>I: Validate identity
+  I-->>N: Session result
+  N-->>B: Secure HttpOnly cookie
+  B->>N: Protected request
+  N->>I: Validate session and permission
+  I-->>N: Authorised
+  N-->>B: Rendered response
